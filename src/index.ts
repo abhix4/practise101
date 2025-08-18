@@ -1,9 +1,10 @@
 import express from 'express'
+import todoRoute from './routes/todo'
 
 const app = express()
 app.use(express.json())
 
-
+app.use("/todo", todoRoute)
 app.get("/",(req,res) => {
     res.json({
         message:"hello world!"
